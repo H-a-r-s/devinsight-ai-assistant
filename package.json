@@ -1,0 +1,25 @@
+{
+  "name": "devinsight-ai-assistant",
+  "version": "1.0.0",
+  "description": "AI-powered code analysis MCP server with RAG capabilities",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:ui\"",
+    "dev:server": "npm run dev --workspace=packages/mcp-server",
+    "dev:ui": "npm run dev --workspace=packages/web-ui",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.5"
+  },
+  "keywords": ["ai", "mcp", "rag", "code-analysis", "developer-tools"],
+  "author": "Your Name",
+  "license": "MIT"
+}
